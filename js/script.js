@@ -48,6 +48,10 @@ const app = createApp({
                 this.goToNext();
             }, 3000)
         },
+
+        stopAutoplay (){
+            clearInterval(this.autoplay);
+        }
     },
 
     mounted() {

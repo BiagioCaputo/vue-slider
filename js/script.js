@@ -41,8 +41,17 @@ const app = createApp({
             else{
                 this.currentIndex++;
             }
+        },
 
-        }
+        startAutoplay() {
+            this.autoplay = setInterval(() => {
+                this.goToNext();
+            }, 3000)
+        },
+    },
+
+    mounted() {
+        this.startAutoplay();
     }
     
 
